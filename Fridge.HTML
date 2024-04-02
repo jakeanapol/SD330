@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fridge Display</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #container {
+    width: 33%;
+    padding: 20px;
+    border: 2px solid #000;
+    position: relative;
+  }
+
+  #fridge {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  
+  #power-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #temp {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ff0000;
+  }
+  
+  #clock {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    color: #ff0000;
+  }
+  
+  #google-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 240px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  #youtube-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 120px;
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <button id="power-button" onclick="toggleFridge()">Power</button>
+  <img id="fridge" src="https://aptokash.github.io/SD330-2/06-fridge.jpg" alt="Fridge">
+  <div id="temp">Temperature: <span id="temp-value" style="color: #ff0000;">34</span>&deg;F</div>
+  <button id="google-btn" onclick="openGoogle()">Go to Google</button>
+  <button id="youtube-btn" onclick="openYouTube()">Go to YouTube</button>
+  <div id="clock" style="color: #ff0000;"></div>
+</div>
+<footer>
+    <small> © Jake Anapol  03/4/2024</small>
+    <li><small><a href="https://www.w3schools.com/">w3 schools referenced</a></small></li>
+    <li><small><a href="https://chat.openai.com/">ChatGPT referenced design</a></small></li>       
+</footer>
+
+<script>
+  let fridgeOn = false;
+  const fridge = document.getElementById('fridge');
+  const tempValue = document.getElementById('temp-value');
+  const clock = document.getElementById('clock');
+
+  function toggleFridge() {
+    fridgeOn = !fridgeOn;
+    if (fridgeOn) {
+      fridge.style.display = 'block';
+      setInterval(updateClock, 1000);
+    } else {
+      fridge.style.display = 'none';
+      tempValue.textContent = '34';
+      clock.textContent = '';
+    }
+  }
+
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  function openGoogle() {
+    window.open('https://www.google.com', '_blank');
+  }
+
+  function openYouTube() {
+    window.open('https://www.youtube.com', '_blank');
+  }
+</script>
+</body>
+</html>
