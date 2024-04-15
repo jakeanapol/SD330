@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File List</title>
+  <style>
+        body {
+  font-family: monospace;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url('https://www.marist.edu/documents/86200/0/HRV-Spotlight-570x390.jpg/d7ababfa-3d3f-90c1-057e-c5eeecd4835c?t=1682617115421'); /* Replace 'your-image-url.jpg' with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.9; /* 50% faded */
+    }
+    .file-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+    .file-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid black;
+      padding: 10px;
+    }
+    .file-item:last-child {
+      border-bottom: none;
+    }
+    .file-item input[type="file"] {
+      display: none;
+    }
+
+    /* Styling for the image container */
+    #image-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 50%;
+      left: calc(90% - 20px); /* Two-thirds to the right */
+
+    }
+
+    /* Styling for the image */
+    #profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      
+    }
+
+    /* Styling for title and subtitle */
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      position: fixed;
+      top: 20px;
+      left: calc(66% - 20px); /* Two-thirds to the right */
+      font-family: monospace;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      position: fixed;
+      top: 60px; /* Adjust as needed */
+      left: calc(66% - 20px); /* Two-thirds to the right */
+      font-family: monospace;
+    }
+
+    /* Adjust file divisions positioning */
+    .file-div {
+      margin-top: calc(100px + 1in + 200px);
+      font-size: xx-large;
+    }
+  </style>
+</head>
+<body>
+<h3>This is a list of some files for my System Design class at Marist College!
+    Click on my picture to learn more!
+</h3>
+  <!-- Title and subtitle -->
+  <div class="title">Jake Anapol - File List</div>
+  <div class="subtitle">Click on a file to view it:</div>
+
+  <!-- File divisions -->
+  <div class="file-div">
+    <ul class="file-list" id="files">
+      <!-- File list will be dynamically populated here -->
+    </ul>
+  </div>
+
+  <!-- Image container -->
+  <div id="image-container">
+    <a href="https://www.linkedin.com/in/jake-anapol-526617279" target="_blank">
+      <img id="profile-image" src="https://media.licdn.com/dms/image/D4E03AQGV7NUQd-GyOw/profile-displayphoto-shrink_800_800/0/1685630102415?e=2147483647&v=beta&t=z46Pbhi4mEVFbmO9ruiWGRsENcBxFnPL_yRTr5AFjT0" alt="Jake Anapol">
+    </a>
+  </div>
+  <script>
+    var imageVisible = true;
+
+    function githubFilelist(){
+      var htmlString = "";
+
+      (async () => {
+        const response = await fetch("https://api.github.com/repos/jakeanapol/SD330/contents/");
+        const data = await response.json();
+
+        for (let file of data) {
+          var fname = file.name;
+          var fpath = "";
+          var link = "";
+
+          // Determine link based on file name
+          if (fname === "Fridge.HTML") {
+            fpath = "https://jakeanapol.github.io/SD330/Fridge.HTML";
+            link = "Fridge.HTML";
+          } else if (fname === "fridge.html") {
+            fpath = "https://jakeanapol.github.io/SD330/fridge.html";
+            link = "fridge.html";
+          } else if (fname === "index.html") {
+            fpath = "https://jakeanapol.github.io/SD330/index.html";
+            link = "index.html";
+          } else {
+            fpath = "https://jakeanapol.github.io/SD330/" + fname;
+            link = fname;
+          }
+
+          htmlString += "<li class='file-item'>";
+          htmlString += "<a href='" + fpath + "' target='_blank'>" + link + "</a>";
+          htmlString += "</li>";
+        }
+
+        document.getElementById('files').innerHTML = htmlString;
+      })()
+    }
+
+    // Function to toggle image and link
+    function toggleImageAndLink() {
+      var imageContainer = document.getElementById('image-container');
+
+      if (imageVisible) {
+        // Hide image and link
+        imageContainer.style.display = "none";
+        imageVisible = false;
+      } else {
+        // Show image and link
+        imageContainer.style.display = "block";
+        imageVisible = true;
+      }
+    }
+
+    // Call the function when the page loads
+    githubFilelist();
+  </script>
+  <footer>
+    <hr>
+    <small> &copy; Jake Anapol 04/15/2024</small>
+</footer>      
+</body>
+</html>
