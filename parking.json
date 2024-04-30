@@ -1,0 +1,133 @@
+{
+    "parking-lots": [
+      {
+        "name": "Foy",
+        "map_filename": "mapFoy.jpg",
+        "total_spaces": 120,
+        "comments": "Insert comments here",
+        "misc_attributes": {},
+        "spaces": [
+          {
+            "space_id": 1,
+            "type": "faculty",
+            "status": "available",
+            "filled_datetime": "",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 2,
+            "type": "faculty",
+            "status": "filled",
+            "filled_datetime": "2024-05-02 07:54:32",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 3,
+            "type": "handicap",
+            "status": "unavailable",
+            "filled_datetime": "",
+            "reserved_datetime": "2024-05-02 07:16:28"
+          },
+          {
+            "space_id": 4,
+            "type": "handicap",
+            "status": "available",
+            "filled_datetime": "",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 5,
+            "type": "faculty",
+            "status": "available",
+            "filled_datetime": "",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 6,
+            "type": "faculty",
+            "status": "available",
+            "filled_datetime": "",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 7,
+            "type": "faculty",
+            "status": "unavailable",
+            "filled_datetime": "2024-05-02 06:29:58",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 8,
+            "type": "faculty",
+            "status": "unavailable",
+            "filled_datetime": "2024-05-02 06:43:24",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 9,
+            "type": "student",
+            "status": "filled",
+            "filled_datetime": "2024-05-02 06:35:32",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 10,
+            "type": "student",
+            "status": "filled",
+            "filled_datetime": "2024-05-02 07:44:12",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 11,
+            "type": "student",
+            "status": "filled",
+            "filled_datetime": "2024-05-02 08:03:32",
+            "reserved_datetime": ""
+          },
+          {
+            "space_id": 12,
+            "type": "student",
+            "status": "unavailable",
+            "filled_datetime": "",
+            "reserved_datetime": "2024-05-02 07:50:00"
+          }
+        ]
+      },
+      {
+        "name": "Dyson",
+        "map_filename": "mapDyson.jpg",
+        "total_spaces": 80,
+        "comments": "Insert comments here",
+        "misc_attributes": {}
+      },
+      {
+        "name": "Fontaine",
+        "map_filename": "mapFontaine.jpg",
+        "total_spaces": 75,
+        "comments": "Insert comments here",
+        "misc_attributes": {}
+      },
+      {
+        "name": "Midrise",
+        "map_filename": "mapMidrise.jpg",
+        "total_spaces": 50,
+        "comments": "Insert comments here",
+        "misc_attributes": {}
+      },
+      {
+        "name": "Beck",
+        "map_filename": "mapBeck.jpg",
+        "total_spaces": 200,
+        "comments": "Insert comments here",
+        "misc_attributes": {}
+      },
+      {
+        "name": "Fulton",
+        "map_filename": "mapFulton.jpg",
+        "total_spaces": 130,
+        "comments": "Insert comments here",
+        "misc_attributes": {}
+      }
+    ]
+  }
+  
