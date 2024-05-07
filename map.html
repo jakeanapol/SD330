@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Marist College Parking</h1>
+    <h1>Marist College Parking Map</h1>
     <a href="https://www.marist.edu/" target="_blank">
       <img src="logo.png" alt="Marist College Logo" class="logo">
       <nav>
@@ -23,23 +23,26 @@
       </nav>
   </header>
   <div class="breadcrumb">
-    <a href="index.html">Home</a>
+    <a href="index.html">Home</a> >
+    <span>Map</span>
   </div>
 
+  <head>
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='reserve.html'">Reserve
+    </button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
+  <body>
 
-  <div class="container">
-    <h2>Parking Lots</h2>
-    <div class="parking-lots">
-      <button onclick="window.location.href='foy.html'">Foy</button>
-      <button onclick="window.location.href='404.html'">Dyson</button>
-      <button onclick="window.location.href='404.html'">Fontaine</button>
-      <button onclick="window.location.href='404.html'">Midrise</button>
-      <button onclick="window.location.href='404.html'">Beck</button>
-      <button onclick="window.location.href='404.html'">Fulton</button>
-    </div>
-  </div>
+    <img src="lots.jpeg" alt="Parking Lots Image">
+    <link href="style.css">
 
+  </body>
 
   <footer>
     <ul class="footer-links">
@@ -49,9 +52,3 @@
     </ul>
     <p>&copy; 2024 Marist College Parking</p>
   </footer>
-
-
-  <script src="script.js"></script>
-</body>
-
-</html>

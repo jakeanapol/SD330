@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marist College Parking</title>
+  <title>Reserve</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1>Marist College Parking</h1>
+    <h1>Reserve Parking Space</h1>
     <a href="https://www.marist.edu/" target="_blank">
       <img src="logo.png" alt="Marist College Logo" class="logo">
       <nav>
@@ -22,24 +22,37 @@
         </ul>
       </nav>
   </header>
+  </header>
   <div class="breadcrumb">
-    <a href="index.html">Home</a>
+    <a href="index.html">Home</a> >
+    <span>Reserve</span>
   </div>
 
 
 
   <div class="container">
-    <h2>Parking Lots</h2>
-    <div class="parking-lots">
-      <button onclick="window.location.href='foy.html'">Foy</button>
-      <button onclick="window.location.href='404.html'">Dyson</button>
-      <button onclick="window.location.href='404.html'">Fontaine</button>
-      <button onclick="window.location.href='404.html'">Midrise</button>
-      <button onclick="window.location.href='404.html'">Beck</button>
-      <button onclick="window.location.href='404.html'">Fulton</button>
-    </div>
-  </div>
+    <form>
+      <label for="lot_id">Lot ID:</label>
+      <input type="text" id="lot_id" name="lot_id" required><br><br>
 
+      <label for="space_id">Space ID:</label>
+      <input type="text" id="space_id" name="space_id" required><br><br>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required><br><br>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required><br><br>
+
+      <input type="submit" value="Reserve">
+    </form>
+  </div>
 
   <footer>
     <ul class="footer-links">
@@ -49,9 +62,6 @@
     </ul>
     <p>&copy; 2024 Marist College Parking</p>
   </footer>
-
-
-  <script src="script.js"></script>
 </body>
 
 </html>
