@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+  }
+  
+  header {
+    background-color: #b31a1a;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  nav {
+    background-color: #b31a1a;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .container h2 {
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #b31a1a;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ccc;
+  }
+  
+  .home-nav {
+    margin-top: 20px;
+  }
+  
+  .home-nav a {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .home-nav a:hover {
+    color: #b31a1a;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 255px;
+  
+  }
+  
+  button {
+    padding: 20px 70px;
+    
+    font-size: 18px;
+  
+    background-color: lightgray;
+    
+    border: none;
+   
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+    margin: 5px;
+  
+  }
+  
+  
+  button:hover {
+    background-color: #b31a1a;
+    
+    color: white;
+   
+  }
+  
+  
+  input[type="submit"] {
+    padding: 15px 30px;
+   
+    font-size: 18px;
+    
+  }
+  
+  
+  input[type="submit"]:hover {
+    background-color: #b31a1a;
+    color: white;
+  }
+  
+  .breadcrumb {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #b31a1a;
+  }
+  
+  .breadcrumb a::after {
+    content: '>';
+    margin: 0 5px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+  }
+  
+  .footer-links li a {
+    color: white;
+    padding: 0px;
+    text-decoration: none;
+  }
+  
+  .footer-links li a:hover {
+    text-decoration: underline;
+  }
